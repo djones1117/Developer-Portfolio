@@ -206,4 +206,16 @@ border-radius: 12px;
 box-shadow: 0 3px 10px var(--primary-shadow);
 padding: 18px;
 margin: 10px;
-  }
+}
+
+.contact h2{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+.contact-links {
+text-align: center;
+}
+  
