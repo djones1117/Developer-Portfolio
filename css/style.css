@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+@media screen and (max-width: 720px) {
+/*changes reflects on screen with a width of 720px and below*/
+}
+
 :root {
 font-family: 'Roboto', sans-serif;
 --normal-font: 400;
@@ -51,7 +55,7 @@ z-index: 1;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 1.5rem 3.5rem;
+padding: 1.5rem 1rem;
 background-color: var(--bg-color);
 box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
