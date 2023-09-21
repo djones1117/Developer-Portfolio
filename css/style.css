@@ -104,6 +104,7 @@ margin: auto;
 .avatar img {
 width: 35rem;
 height: 35rem;
+border-radius: 50%;
 }
 
 .bio {
