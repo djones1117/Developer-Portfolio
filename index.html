@@ -19,277 +19,384 @@
   </head>
   <body>
     <nav>
-      <h1>Dylan Jones</h1>
+      
       <ul class="navigation">
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="burger-menu" id="burger-menu">
-        <ion-icon class="bars" name="menu"></ion-icon>
-      </button>
+      
     </nav>
 
-    <section class="avatar" id="about">
-      <img
-        width="64"
-        height="64"
-        src="assets/heroImg.png"
-        alt="dylan jones"
-        loading="lazy"
-        class="avatar-img"
-      />
-      <div class="bio animate__animated animate__shakeX">
-        <h2 class="bio-title">About Me</h2>
-        <p class="bio-text">
-          Hello, I am Dylan Jones. I'm a problem solver that enjoys working on
-          frontend and backend material. I enjoy learning new things and
-          challenging myself daily. I'm extremely passionate about creating
-          quality work that matches the customers wants and needs. I take pride
-          in being punctual and developing new skills that allow me to create
-          useful technology.
-        </p>
-      </div>
-    </section>
-
-    <section class="more-about">
-      <h2>More About Me</h2>
-      <p>
-        I'm currently working at an Intership as a Software Engineer. My roles
-        consist of Data Web Scraping, User Testing, and building the
-        application!
-      </p>
-      <p>
-        Succesfully completed 420 hours of General Assembly's Software
-        Engineering Immersive Bootcamp from May 2023 - August 2023
-      </p>
-    </section>
-    <section class="skills" id="skills">
-      <h2 class="skill-header">My Top Skills</h2>
-      <div class="skills-wrapper">
-        <div class="first-set animate__animated animate__pulse">
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/color/48/html-5--v1.png"
-            alt="html-5--v1"
-          />
-
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/color/48/css3.png"
-            alt="css3"
-          />
-
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/ios-filled/50/javascript-logo.png"
-            alt="javascript-logo"
-          />
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/color/48/google-cloud.png"
-            alt="google-cloud"
-          />
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/nolan/64/mongo-db.png"
-            alt="mongo"
-          />
-        </div>
-        <div class="second-set animate__animated animate__pulse">
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/fluency/48/node-js.png"
-            alt="node-js"
-          />
-
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/nolan/64/react-native.png"
-            alt="react-native"
-          />
-
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/ios-filled/50/python.png"
-            alt="python"
-          />
+    <section class="hero" id="about">
+      <div class="hero__container">
+    
+        <!-- LEFT COLUMN -->
+        <div class="hero__content">
+          <h1 class="hero__title">Dylan Jones</h1>
         
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/color/48/amazon-web-services.png"
-            alt="aws"
-          />
-          <img
-            width="48"
-            height="48"
-            loading="lazy"
-            class="icon icon-card"
-            src="https://img.icons8.com/color/48/postgreesql.png"
-            alt="sql"
-          />
+          <p class="hero__summary">
+            I'm a problem solver that enjoys working on frontend
+            and backend material. I enjoy learning new things and
+            challenging myself daily. I'm extremely passionate
+            about creating quality work that matches the
+            customers wants and needs. I take pride in being
+            punctual and developing new skills that allow me to
+            create useful technology.
+          </p>
+        
+          <div class="hero__actions">
+            <a class="hero__resume-btn" href="#" target="_blank" rel="noopener">
+              My resume
+            </a>
+        
+            <div class="hero__social">
+              <a href="https://www.linkedin.com/in/dylan-jones-09b41a280/"
+                 target="_blank" rel="noopener" aria-label="LinkedIn">
+                <img src="assets/li.png" alt="LinkedIn" class="hero__icon" />
+              </a>
+        
+              <a href="https://github.com/djones1117"
+                 target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="assets/github.png" alt="GitHub" class="hero__icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+    
+        <!-- RIGHT COLUMN -->
+        <div class="hero__media">
+          <img src="assets/creek.png" alt="Creek photo" loading="lazy" />
+          <img src="assets/hero.png" alt="Hero photo" loading="lazy" />
+          <img src="assets/joshua.png" alt="Joshua photo" loading="lazy" />
+        </div>
+    
+      </div>
+    </section>
+
+
+    <section class="experience" id="experience">
+      <div class="experience__container">
+    
+        <h2 class="experience__title">Experience</h2>
+    
+        <div class="experience__timeline">
+    
+          <!-- ROW 1 -->
+          <div class="experience__row">
+            <div class="experience__org">TeachMeNow</div>
+            <div class="experience__dot"></div>
+            <div class="experience__details">
+              <div class="experience__dates">2023 - Present</div>
+              <div class="experience__role">Software Engineer</div>
+              <div class="experience__tags">
+                <span>Data Web Scraping</span>
+                <span>User Testing</span>
+                <span>Building Applications</span>
+              </div>
+            </div>
+          </div>
+    
+          <!-- ROW 2 -->
+          <div class="experience__row">
+            <div class="experience__org experience__org--ga">General Assembly</div>
+            <div class="experience__dot"></div>
+            <div class="experience__details">
+              <div class="experience__dates">MAY 2023 - AUGUST 2023</div>
+              <div class="experience__role">Software Engineering Immersive Bootcamp</div>
+              <div class="experience__tags">
+                <span>Data Web Scraping</span>
+                <span>User Testing</span>
+                <span>Building Applications</span>
+              </div>
+            </div>
+          </div>
+    
         </div>
       </div>
     </section>
+    
+    
+
+   
+    <section class="skills" id="skills">
+      <div class="skills__container">
+        <h2 class="skills__title">Skills</h2>
+    
+        <div class="skills__grid">
+          <!-- Row 1 (7) -->
+          <img src="assets/image1.png" alt="JavaScript" />
+          <img src="assets/image2.png" alt="HTML5" />
+          <img src="assets/image3.png" alt="CSS3" />
+          <img src="assets/image4.png" alt="Google Cloud" />
+          <img src="assets/image5.png" alt="Flask" />
+          <img src="assets/image6.png" alt="Node.js" />
+          <img src="assets/image7.png" alt="React" />
+    
+          <!-- Row 2 (7) -->
+          <img src="assets/image8.png" alt="Python" />
+          <img src="assets/image9.png" alt="AWS" />
+          <img src="assets/image10.png" alt="Flutter" />
+          <img src="assets/image11.png" alt="MongoDB" />
+          <img src="assets/image12.png" alt="Android" />
+          <img src="assets/image13.png" alt="iOS" />
+          <img src="assets/image14.png" alt="Docker" />
+        </div>
+      </div>
+    </section>
+    
     <section class="projects" id="projects">
-      <h2 class="projects-title">Some of my Recent Projects</h2>
-      <div class="projects-container">
-        <div class="project-container project-card">
-          <img
-            src="assets/mealPlanner.png"
-            alt="meal-planner"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Meal Planner</h3>
-          <p class="project-details">
-            A web application used for creating meals, deleting meals,
-            interacting with other users' meals, and storing your favorite
-            recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
-            Github manager, overseeing the management of repositories. Served as
-            Scrum Master, finalizing all meetings.
-          </p>
-          <a
-            href="https://mealplanner1.fly.dev/"
-            target="_blank"
-            class="project-link"
-            >Live App</a
-          >
-          <a
-            href="https://github.com/djones1117/Meal-Planner"
-            target="_blank"
-            class="github-repo"
-            >Github Repo</a
-          >
+      <div class="projects__container">
+        <h2 class="projects__title">Projects</h2>
+    
+        <div class="projects__list">
+    
+          <!-- PROJECT ROW 1 -->
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/betterpic.png"
+              alt="Meal Planner"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">MEAL PLANNER</h3>
+    
+              <p class="project__description">
+                A web application used for creating meals, deleting meals,
+                interacting with other users' meals, and storing your favorite
+                recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
+                Github manager, overseeing the management of repositories. Served as
+                Scrum Master, finalizing all meetings.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://mealplanner1.fly.dev/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/Meal-Planner" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/riska.png"
+              alt="Meal Planner"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">MEAL PLANNER</h3>
+    
+              <p class="project__description">
+                A web application used for creating meals, deleting meals,
+                interacting with other users' meals, and storing your favorite
+                recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
+                Github manager, overseeing the management of repositories. Served as
+                Scrum Master, finalizing all meetings.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://mealplanner1.fly.dev/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/Meal-Planner" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/forest.png"
+              alt="Meal Planner"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">MEAL PLANNER</h3>
+    
+              <p class="project__description">
+                A web application used for creating meals, deleting meals,
+                interacting with other users' meals, and storing your favorite
+                recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
+                Github manager, overseeing the management of repositories. Served as
+                Scrum Master, finalizing all meetings.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://mealplanner1.fly.dev/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/Meal-Planner" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/blog1.png"
+              alt="Meal Planner"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">MEAL PLANNER</h3>
+    
+              <p class="project__description">
+                A web application used for creating meals, deleting meals,
+                interacting with other users' meals, and storing your favorite
+                recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
+                Github manager, overseeing the management of repositories. Served as
+                Scrum Master, finalizing all meetings.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://mealplanner1.fly.dev/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/Meal-Planner" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+
+              </div>
+            </div>
+          </article>
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/why.png"
+              alt="Meal Planner"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">MEAL PLANNER</h3>
+    
+              <p class="project__description">
+                A web application used for creating meals, deleting meals,
+                interacting with other users' meals, and storing your favorite
+                recipes. Implemented AWS uploads using AWS S3 Bucket. Acted as
+                Github manager, overseeing the management of repositories. Served as
+                Scrum Master, finalizing all meetings.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://mealplanner1.fly.dev/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/Meal-Planner" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+
+              </div>
+            </div>
+          </article>
+        
+          
+    
+          <!-- PROJECT ROW 2 -->
+          <article class="project">
+            <img
+              class="project__image"
+              src="assets/home.png"
+              alt="Every Hike"
+              loading="lazy"
+            />
+    
+            <div class="project__content">
+              <h3 class="project__name">EVERY HIKE</h3>
+    
+              <p class="project__description">
+                An application that allows users to make an account, create posts
+                about hikes, and interact with other users. Developed using the
+                MERN Stack, implemented CRUD operations and client-side routing for
+                seamless navigation. Utilized an API key to enable users to discover
+                activities within national parks.
+              </p>
+    
+              <div class="project__links">
+                <a class="project__link" href="https://every-hike-1117.onrender.com/" target="_blank" rel="noopener">
+                  Go to live App
+                </a>
+    
+                <a class="project__link" href="https://github.com/djones1117/every-hike" target="_blank" rel="noopener">
+                  Github Repo
+                </a>
+    
+                <img class="project__arrow" src="assets/arrow.png" alt="" aria-hidden="true" />
+              </div>
+            </div>
+          </article>
+    
         </div>
-        <div class="project-container project-card">
-          <img
-            src="assets/everyHike.png"
-            alt="every-hike"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Every Hike</h3>
-          <p class="project-details">
-            An application that allows users to make an account, create posts
-            about hikes, and interact with other users. Developed by using the
-            MERN Stack, implemented CRUD operations and client-side routing for
-            seamless navigation. Utilized an API key to enable users to discover
-            activities within national parks.
-          </p>
-          <a
-            href="https://every-hike-1117.onrender.com/"
-            target="_blank"
-            class="project-link"
-            >Live App</a
-          >
-          <a
-            href="https://github.com/djones1117/every-hike"
-            target="_blank"
-            class="github-repo"
-            >Github Repo</a
-          >
-        </div>
-        <div class="project-container project-card">
-          <img
-            src="assets/soccerTracker.png"
-            alt="soccer-tracker"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Soccer Tracker</h3>
-          <p class="project-details">
-            An application that allows users to create a soccer team and fill it
-            with their fantasy signings. Implemented full CRUD functionality
-            using Express.js so that users can create, edit the players, delete,
-            and can read information about each team created. Employed the MEN
-            Stack to implement server-side routing.
-          </p>
-          <a
-            href="https://magnificent-bass-girdle.cyclic.app/"
-            target="_blank"
-            class="project-link"
-            >Live App</a
-          >
-          <a
-            href="https://github.com/djones1117/Soccer-Tracker"
-            target="_blank"
-            class="github-repo"
-            >Github Repo</a
-          >
-        </div>
-        <!-- <div class="project-container project-card">
-          <img
-            src="assets/hangMan.png"
-            alt="hangman"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Hangman</h3>
-          <p class="project-details">
-            A static web application that renders a game of Hangman using HTML,
-            CSS, and JS. Renders a win/loss message depending if the user
-            correctly guesses the secret word. Developed by using Vanilla
-            JavaScript.
-          </p>
-          <a
-            href="https://djones1117.github.io/Hangman/"
-            target="_blank"
-            class="project-link"
-            >Live App</a
-          >
-          <a
-            href="https://github.com/djones1117/Hangman"
-            target="_blank"
-            class="github-repo"
-            >Github Repo</a
-          >
-        </div> -->
       </div>
     </section>
+    
     <section class="contact" id="contact">
-      <h2>Contact Me</h2>
-      <div class="contact-links">
-        <div class="row">
-          <a href="https://github.com/djones1117">My Github</a>
-        </div>
-        <div class="row">
-          <a href="https://www.linkedin.com/in/dylan-jones-09b41a280/"
-            >LinkedIn</a
-          >
-        </div>
-        <div class="row">
-          <h4>djones111797@gmail.com</h4>
+      <div class="contact__line"></div>
+    
+      <div class="contact__container">
+        <div class="contact__row">
+          <div class="contact__name">Dylan Jones</div>
+    
+          <!-- Right side becomes a small 2-row column -->
+          <div class="contact__right">
+            <div class="contact__right-top">
+              <div class="contact__label">Contact me</div>
+    
+              <div class="contact__icons">
+                <a href="https://www.linkedin.com/in/dylan-jones-09b41a280/"
+                   target="_blank" rel="noopener" aria-label="LinkedIn">
+                  <img src="assets/li.png" alt="" />
+                </a>
+    
+                <a href="https://github.com/djones1117"
+                   target="_blank" rel="noopener" aria-label="GitHub">
+                  <img src="assets/github.png" alt="" />
+                </a>
+    
+                <a href="mailto:djones111797@gmail.com" aria-label="Email">
+                  <img src="assets/Vector.png" alt="email" />
+                </a>
+              </div>
+            </div>
+    
+            <div class="contact__copyright">
+              © All rights reserved since 2013
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    
+    
   </body>
 </html>

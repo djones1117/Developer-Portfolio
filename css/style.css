@@ -1,232 +1,622 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
-@media screen and (max-width: 720px) {
-/*changes reflects on screen with a width of 720px and below*/
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+.navigation {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-:root {
-font-family: 'Roboto', sans-serif;
---normal-font: 400;
---bold-font: 700;
---bolder-font: 900;
---bg-color: #fcfcfc;
---primary-color: #9C27B0;
---secondary-color: #FF0000;
---primary-shadow: #8b8eaf;
---secondary-shadow: #a17a69;
-margin-bottom: 0.5rem;
-margin-bottom: var(--bottom-margin-2);
-line-height: 1.7rem;
-transition: 0.3s;
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;              
+    box-sizing: border-box;   
+    padding: 30px 112px 30px 0; 
+  
+    background: #EAEEF3;
+  }
+
+/* NAV LIST */
+.navigation {
+  display: flex;
+  gap: 40px; 
+  width: fit-content;
 }
 
+
+@media (min-width: 1400px) {
+  .navigation {
+    margin-left: 906px;
+  }
+}
+
+@media (max-width: 1399px) {
+    .navigation {
+      margin-left: auto; 
+      padding-right: 0; 
+    }
+  }
+  
+
+/* LINK TYPOGRAPHY */
+.nav-link {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em; /* 6% */
+  line-height: 1;
+
+  color: var(--primary-color, #000);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color, #111);
+}
+/* HERO SECTION POSITIONING */
+.hero {
+    margin-top: 148px; 
+  }
+
+  
+.hero__container {
+  padding-left: 170px; 
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 80px; 
+}
+
+/* LEFT COLUMN LAYOUT */
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    width: 521px;
+  }
+  
+  /* SPEC: 48px between name + text */
+  .hero__title {
+     
+    height: 77px;  
+    display: flex;
+    align-items: center;
+    font-family: "Inter";
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1;           /* 100% */
+    letter-spacing: 0.10em;   /* 10% */
+    color: #000;
+  
+    margin: 0 0 48px 0;      
+  }
+  
+  /* SPEC: text styling bubble */
+  .hero__summary {
+    
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #000;
+  
+    margin: 0 0 32px 0;       
+    max-width: 520px;         
+  }
+  
+  /* ACTION ROW */
+  .hero__actions {
+    display: flex;
+    align-items: center;
+    gap: 48px;               
+  }
+  
+  
+  .hero__resume-btn {
+    width: 216px;   
+    height: 59px;   
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-family: "Inter";
+    font-weight: 600;         
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0;
+    border: 2px solid #22469F;
+    color: #22469F;
+    text-decoration: none;
+    border-radius: 14px;
+    padding: 0px;
+    background: transparent;
+  }
+  
+  /* ICON GROUP */
+  .hero__social {
+    display: flex;
+    align-items: center;
+    gap: 24px;               
+  }
+  
+  /* ICON SIZE */
+  .hero__icon {
+    width: 32px;             
+    height: 32px;
+    display: block;
+  }
+
+  .hero__media {
+    width: 504.3px;       
+    height: 416px;        
+  
+    display: flex;
+    align-items: flex-start; /* baseline for left/right images */
+    gap: 14.5px;             
+  
+    flex: 0 0 auto;
+  }
+
+  .hero__media img {
+    width: 158.39px;       
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* LEFT image (top aligned) */
+  .hero__media img:nth-child(1) {
+    height: 323.15px;
+    align-self: flex-start;
+  }
+  
+  /* MIDDLE image (bottom aligned)
+     This exactly reproduces the 94.67px top offset in Figma because:
+     416 - 321.33 = 94.67
+  */
+  .hero__media img:nth-child(2) {
+    height: 321.33px;
+    align-self: flex-end;
+  }
+  
+  /* RIGHT image (slightly pushed down from top) */
+  .hero__media img:nth-child(3) {
+    height: 298.57px;
+    align-self: flex-start;
+    margin-top: 29.13px;  
+  }
+  
+
+
+  .experience {
+    margin-top: 120px;
+    margin-bottom: 80px;
+  }
+  
+  .experience__container {
+    padding-left: 170px; 
+    box-sizing: border-box;
+  }
+  
+  /* Title spacing */
+  .experience__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 0.06em;
+    color: #22469F;
+    margin: 0 0 32px 0; 
+  }
+  
+  /* Timeline rows */
+  .experience__timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; 
+  }
+  
+  /*
+    3-column grid:
+    - left org column (fixed)
+    - dot column (fixed)
+    - details column (flex)
+  */
+  .experience__row {
+    display: grid;
+    grid-template-columns: 160px 24px 1fr; 
+    column-gap: 104px;                    
+    align-items: start;
+  }
+  
+  /* Left org label */
+  .experience__org {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #000;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1; /* keeps text behind dot if they overlap */
+  }
+  
+.experience__org--ga {
+    width: 197px;
+    margin-right: -37px; /* 197 - 160 = 37px */
+  }
+  
+  
+  /* Dot */
+  .experience__dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #22469F;
+    justify-self: center;
+    
+  }
+
+  /* RIGHT-SIDE DETAILS BLOCK */
+.experience__details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* DATES (e.g., 2023 - Present / MAY 2023 - AUGUST 2023) */
+  .experience__dates {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;     /* 100% */
+    letter-spacing: 0; 
+    color: #5F5F5F;
+    margin: 0 0 8px 0;
+  }
+  
+  /* ROLE TITLE (e.g., Software Engineer) */
+  .experience__role {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;       /* 100% */
+    letter-spacing: 0.06em;  /* 6% */
+    color: #000;
+    margin: 0 0 16px 0;
+  }
+  
+  /* TAG ROW (3 items) */
+  .experience__tags {
+    display: flex;
+    align-items: center;
+    gap: 48px;            
+  }
+  
+  /* TAG TYPOGRAPHY */
+  .experience__tags span {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;       /* 100% */
+    letter-spacing: 0;
+    color: #000;
+    white-space: nowrap;  /* prevents awkward wrapping */
+  }
+
+  /* ===== SKILLS SECTION ===== */
+.skills {
+    /* Spec: #5E8CC7 @ 26% */
+    background: rgba(94, 140, 199, 0.26);
+  
+    /* Spec height target */
+    min-height: 442px;
+    width: 100%;
+  }
+  
+ 
+  .skills__container {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  
+   
+    padding-top: 48px;
+    padding-bottom: 100px;
+  }
+  
+  /* Title spec */
+  .skills__title {
+    width: 117px;
+    height: 48px;
+  
+    margin: 0 0 0 170px; /* 170px from left */
+    display: flex;
+    align-items: center;
+  
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;        /* 100% */
+    letter-spacing: 0.06em;/* 6% */
+    color: #22469F;
+  }
+  
+  /*
+    Icons grid:
+    - 14 items
+    - 2 rows
+    - each icon 64x64
+    
+  */
+  .skills__grid {
+    
+    width: 978px;
+    max-width: calc(100% - 231px * 2);
+  
+    
+    margin-left: 231px;
+  
+    /* Space down from title area */
+    margin-top: 48px;
+  
+    display: grid;
+    grid-template-columns: repeat(7, 64px);
+    grid-auto-rows: 64px;
+  
+    /* Let the 978px width distribute neatly */
+    justify-content: space-between;
+  
+    /* Vertical gap between the two rows */
+    row-gap: 80px;
+  }
+  
+  .skills__grid img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Row 1, image 5 (overall 5th icon) */
+.skills__grid img:nth-child(5) {
+    width: 54.62px;
+    height: 64px;
+  }
+  
+  /* Row 2, image 14 (overall 14th icon) */
+  .skills__grid img:nth-child(14) {
+    width: 56px;
+    height: 64px;
+  }
+  
+  /* ===== PROJECTS SECTION ===== */
+.projects {
+    margin-top: 80px; 
+    
+  }
+  
+  .projects__container {
+    padding-left: 170px; 
+    box-sizing: border-box;
+  }
+  
+  
+  .projects__title {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1; 
+    letter-spacing: 0.06em;
+    color: #22469F;
+  
+    margin: 0 0 48px 0; /* red spacing before first project block */
+  }
+  
+  /* vertical spacing between project rows */
+  .projects__list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px; /* red margin between areas */
+  }
+  
+  /* 2-column project row */
+  .project {
+    display: flex;
+    align-items: flex-start;
+    gap: 104px; /* image → text gap spec */
+
+    border-top: 1px solid #D2D2D2;
+    padding-top: 96px;
+
+   
+  width: 1076px;
+  max-width: 100%;
+  }
+  
+ 
+  .project__image {
+    width: 366px;
+    height: 214px;
+    object-fit: cover;
+    display: block;
+    flex: 0 0 auto;
+  }
+  
+  /* right column */
+  .project__content {
+    max-width: 600px; /* safe readable line length; adjust if needed */
+  }
+  
+  /* Project name (MEAL PLANNER / EVERY HIKE) */
+  .project__name {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 40px;        /* matches the bubble feel in your screenshot */
+    line-height: 1;
+    letter-spacing: 0.06em;
+    color: #000;
+  
+    margin: 0 0 32px 0; /* title → description */
+  }
+  
+  /* Description text */
+  .project__description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #000;
+  
+    margin: 0; /* we’ll control spacing with links margin-top */
+  }
+  
+  /* link row spacing */
+  .project__links {
+    display: flex;
+    align-items: center;
+    gap: 32px;            /* horizontal spacing between links */
+    margin-top: 32px;     /* text → links spec */
+  }
+  
+  /* link typography */
+  .project__link {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0;
+    color: #22469F;
+    text-decoration: none;
+  }
+  
+  .project__link:hover {
+    text-decoration: underline;
+  }
+  
+  .project__arrow {
+    width: 48px;
+    height: 48px;
+    display: block;
+  }
+  /* ===== CONTACT SECTION ===== */
+.contact {
+    
+    margin-top: 0; /* keep clean section stack */
+  }
+  
+  .contact__container {
+    padding-left: 170px; /* same left system */
+    padding-right: 170px;
+    box-sizing: border-box;
+  
+    padding-top: 32px;  /* 32px between line and name */
+    padding-bottom: 48px; /* comfortable footer breathing room */
+  }
+
+  
+  
+  /* Main row: name on left, contact cluster on right */
+  .contact__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  /* Right side wrapper is now a column */
+.contact__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 32px; 
+  }
+
+  
+.contact__right-top {
+    display: flex;
+    align-items: center;
+    gap: 104px; 
+  }
+  
+  
+  .contact__name {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0.10em; /* 10% */
+    color: #000;
+  }
+  
+  
+  /* "Contact me" label spec */
+  .contact__label {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0.06em; /* 6% */
+    color: #22469F;
+  
+    width: 150px; 
+  }
+  
+  /* Icons row */
+  .contact__icons {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* 32 between icons */
+  }
+  
+
+  .contact__icons img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    object-fit: contain;
+  }
+  /* Copyright text (now aligned with Contact me block) */
+.contact__copyright {
+    margin: 0; /* gap controls spacing now */
+    text-align: left;
+  
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #000;
+  }
+  
+  
+ 
+.contact__line {
+    border-top: 1px solid #D2D2D2;
+  
+    width: 1076px;
+    max-width: 100%;
+  
+   
+    margin-left: 170px;
+  }
+  
+  
 html {
 scroll-behavior: smooth;
 }
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-ul {
-list-style-type: none;
-}
-
-a {
-text-decoration: none;
-color: var(--primary-color);
-}
-
-a:hover {
-color: var(--secondary-color);
-}
-
-body {
-font-family: var(--font-family);
-margin-bottom: 20px;
-}
-
-nav {
-position: sticky;  
-top: 0;
-left: 0;
-z-index: 1;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 1.5rem 1rem;
-background-color: var(--bg-color);
-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav h1 {
-color: var(--primary-color);
-}
-
-nav a {
-    color: var(--primary-color);
-    transition: var(--transition);
-}
-nav a:hover {
-color: var(--secondary-color);
-border-bottom: 2px solid var(--secondary-color);
-}
-
-nav ul {
-display: flex;
-gap: 1.8rem;
-}
-
-nav ul li {
-font-weight: var(--bold-font);
-}
-
-.burger-menu {
-color: var(--primary-color);
-font-size: 2rem;
-border: 0;
-background-color: transparent;
-cursor: pointer;
-display: none;
-}
-
-.avatar {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 2.5rem;
-max-width: 68rem;
-margin: auto;
-}
-
-.avatar img {
-width: 35rem;
-height: 35rem;
-border-radius: 50%;
-}
-
-.bio {
-width: 25rem;
-padding: 0.6rem;
-border-radius: 6px;
-box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-}
-
-.bio h1 {
-margin-bottom: var(--bottom-margin);
-}
-
-.bio p {
-line-height: var(--line-height);
-padding: 0.3rem 0;
-}
-
-.more-about {
-background-color: var(--bg-color);
-padding: 1rem 6rem;
-}
-
-.more-about h2 {
-margin-bottom: var(--bottom-margin);
-text-align: center;
-}
-
-.more-about p {
-line-height: var(--line-height);
-padding: .3rem;
-}
-
-.skills {
-max-width: 68rem;
-margin: auto;
-text-align: center;
-margin-top: 2.5rem;
-}
-
-.skills header {
-margin-bottom: 1rem;
-}
-
-.skills-wrapper img {
-padding: 1.25rem;
-}
-
-.icon {
-width: 11.875rem;
-height: 11.25rem;
-}
-
-.icon-card {
-background-color: #fff;
-border-radius: 11px;
-box-shadow: 0 3px 10px var(--secondary-shadow);
-padding: 20px;
-margin: 10px;
-} 
-
-.projects {
-background-color: var(--bg-color);
-padding: 32px 0;
-margin-top: 2rem;
-}
-
-.project-pic {
-width: 90%;
-height: 90%;
-}
-
-.projects-container {
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.projects-title {
-text-align: center;
-margin-bottom: 1rem;
-}
-
-.project-container {
-text-align: center;
-width: 22rem;
-padding: 1rem;
-}
-
-.project-container p {
-padding: 0.4rem;
-}
-
-.project-title {
-margin-bottom: var(--bottom-margin);
-}
-
-.project-details {
-margin-bottom: var(--bottom-margin);
-}
-
-.project-card {
-background-color: #fff;
-border-radius: 12px;
-box-shadow: 0 3px 10px var(--primary-shadow);
-padding: 18px;
-margin: 10px;
-}
-
-.contact .contact-links .row {
-padding: 10px 0;
-}
-.contact h2{
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-}
-
-.contact-links {
-text-align: center;
-margin-bottom: 10px;
-
-}
-  
